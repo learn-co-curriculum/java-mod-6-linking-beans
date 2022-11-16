@@ -38,7 +38,14 @@ But with dependency injection, we don't have to instantiate the `LunchService`.
 Instead, this technique allows us to loosely couple our components and shift the
 work of instantiation onto Spring to manage our beans within the application
 context! In other words, it will look at other beans defined in the context to
-inject the specific field or parameter values.
+inject the specific field or parameter values. Here are some advantages of
+dependency injection:
+
+- Loosely coupled: If we remember from an earlier lesson, coupling refers to the
+  dependency two classes may have on each other. Code that is loosely coupled is
+  easier to reuse, maintain, and test as it reduces the number of dependencies.
+- Readability: Dependency injection reduces the amount of cluttered logic that
+  is often found in constructors.
 
 In this lesson, we will go into more detail about what is happening under the hood
 here and how we can reference one bean in another through the use of dependency
@@ -302,13 +309,13 @@ We will be modifying the `Human` class to define the links since it has the
 ```java
 // MyConfig.java
 
-package config;
+package com.example.demo.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "main")
+@ComponentScan(basePackages = "com.example.demo.domain")
 public class MyConfig {
 
 }
@@ -532,3 +539,8 @@ We have learned how to wire beans in this lesson through a design called
 dependency injection. Spring makes it easy to link beans by automatically
 injecting dependencies. For most of our application, we will use the `@Autowired`
 annotation with the constructor, which is what we saw in the Spring MVC lessons.
+
+## References
+
+- [Benefits of Dependency Injection](https://betterprogramming.pub/the-6-benefits-of-dependency-injection-7802b207ec69)
+- [Autowired Annotation](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html)
