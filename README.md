@@ -196,7 +196,7 @@ public class DemoApplication {
 }
 ```
 
-```java
+```text
 Human{name='Lily', dog=null}
 Dog{name='Luna'}
 ```
@@ -235,7 +235,7 @@ public Human human() {
 Now if we run the `DemoApplication` of the `DemoApplication` class, we will get the
 following output:
 
-```java
+```text
 Human{name='Lily', dog=Dog{name='Luna'}}
 Dog{name='Luna'}
 ```
@@ -270,7 +270,7 @@ public Human human(Dog dog) {
 
 Now run the `DemoApplication` again. It should give same output as we saw above:
 
-```java
+```text
 Human{name='Lily', dog=Dog{name='Luna'}}
 Dog{name='Luna'}
 ```
@@ -416,6 +416,13 @@ public class DemoApplication {
 }
 ```
 
+If we were to run this code now, the output would look like this:
+
+```text
+Human{name='null', dog=Dog{name='null'}}
+Dog{name='null'}
+```
+
 ### Annotate Class Constructor
 
 We have to create a constructor in the `Human` class that takes a `Dog` instance
@@ -482,7 +489,7 @@ public class Human {
 
 If we run the application we will get the following output:
 
-```java
+```text
 Human{name='Lily', dog=Dog{name='Luna'}}
 Dog{name='Luna'}
 ```
