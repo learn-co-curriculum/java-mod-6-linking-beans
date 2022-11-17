@@ -497,6 +497,12 @@ Dog{name='Luna'}
 When Spring looks at the constructor, it searches for a `Dog` bean in its scope
 and invokes the constructor with the `Dog` bean.
 
+Since Spring manages beans, every bean is defined with a scope. The default scope
+of a bean is a design pattern called a singleton. A **singleton** is a creational
+design pattern that ensures only one instance of the class exists within a system
+to provide a global access point. In other words, there is only **one** instance
+of a bean within the application context.
+
 ### Annotate the Class Field
 
 We can annotate the field directly without using a constructor.
