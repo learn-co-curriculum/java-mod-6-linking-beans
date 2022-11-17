@@ -501,7 +501,9 @@ Since Spring manages beans, every bean is defined with a scope. The default scop
 of a bean is a design pattern called a singleton. A **singleton** is a creational
 design pattern that ensures only one instance of the class exists within a system
 to provide a global access point. In other words, there is only **one** instance
-of a bean within the application context.
+of a bean within the application context. For more information on bean scope, see
+the documentation here:
+[Bean Scope Documentation](https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch04s04.html)
 
 ### Annotate the Class Field
 
@@ -556,4 +558,5 @@ annotation with the constructor, which is what we saw in the Spring MVC lessons.
 ## References
 
 - [Benefits of Dependency Injection](https://betterprogramming.pub/the-6-benefits-of-dependency-injection-7802b207ec69)
+- [Bean Scope Documentation](https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch04s04.html)
 - [Autowired Annotation](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html)
